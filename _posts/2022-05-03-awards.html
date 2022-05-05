@@ -11,6 +11,7 @@ permalink: awards
           <h3 class="top">Awards</h3>
         </header>
         <ul class="link-list">
+          <li><a href="#disaward">Dissertation Awards</a></li>
           <li><a href="#confaward">Conference Awards</a></li>
           <li><a href="#pcaward">PC and SPC Awards</a></li>
         </ul>
@@ -22,12 +23,48 @@ permalink: awards
 
 
     <div class="9u 12u(mobile)">
-      <div id="confaward"></div>
+      <div id="disaward"></div>
+
+      <section>
+        <div class="row">
+          <div class="12u 12u(mobile)">
+            <h1 class="top">ICAPS 2022 Best Dissertation Award</h1>
+      
+            <h3>Winners</h3>
+            <ul>
+              <li><h4>Star-Topology Decoupled State-Space Search in AI Planning and Model Checking.</h4>
+                <h4><em>Daniel Gnad</h4></em>
+              <p>The dissertation introduces “star decoupled search”, a novel way to carry forward state searches more effectively, making use and exploiting conditional independence relations that can be observed in the causal graph of the planning domain. Like partial order reduction techniques, and in particular, symbolic search methods, the idea is to represent sets of states in a suitable factorized manner that can provide exponential savings in both time and space. The dissertation formulates and studies this novel search technique, theoretically and experimentally, and shows how it can be used in combination with other techniques such as partial order reduction, symmetry breaking, and dominance pruning. The effectiveness of star decoupled search is not only demonstrated in the context of planning where a goal state of affairs is to be reached, but also in the setting of model checking for safety and liveness properties. Substantial savings of star decoupled search are shown clearly in both cases.</p></li>
+              
+              <li><h4>Online Spatio-Temporal Demand Supply Matching.</h4>
+               <h4><em>Meghna Lowalekar</em></h4> 
+              <p>The dissertation develops comprehensive solutions for effective online matching of demand to shared resources such as cars, food, or bikes, while accounting for potential future supply and demand. The contributions include novel algorithms for online matching that can efficiently handle tens of thousands of shared resources and thousands of demand requests per minute, theoretical guarantees on solution quality for single capacity and multi-capacity resources, and extensive empirical evaluation of the approach on real datasets and real systems at scale showing substantial performance gains. The effectiveness of the developed approaches has been demonstrated in real-world settings to match taxis to customers and to match security resources to potential threats and are being adopted for future use in several other application areas.</p></li>
+            </ul>
+
+            <h3>Honorable Mentions</h3>
+        <ul>
+        <li> <h4>Synthesis of Interpretable and Obfuscatory Behaviors in Human-Aware AI Systems.</h4>
+          <h4><em>Anagha Kulkarni</h4></em> 
+        <p>The dissertation studies behavior synthesis algorithms whose objective is to improve the interpretability of the behavior of an intelligent agent in the presence of a human observer. In addition, it studies how environment redesign strategies can be leveraged to improve the overall interpretability of the agent’s behavior. To this end, it considers comprehensive assumptions about the entities present in the agent’s environment; namely, that such entities are cooperative, adversarial (i.e., attempt to infer information from the agent’s behavior) or a combination of both. In adversarial settings, the agent generates obfuscatory behavior that prevents sensitive information from falling into the hands of the adversarial entities. The dissertation shows that it is possible to synthesize interpretable as well as obfuscatory behaviors using a single underlying algorithmic framework. These results made significant contributions to the rapidly growing area of explainable planning.</p></li>
+
+        <li> <h4>Symmetry Breaking and Operator Pruning in Classical Planning and Beyond.</h4>
+          <h4><em>Alexander Shleyfman</h4></em>
+        <p>The dissertation is devoted to the study of graph automorphisms as a tool for symmetry-based search pruning and heuristic enhancements for deterministic forward-search planning. The contributions significantly expand the existing knowledge in this area, including new ways to exploit strictly larger symmetry groups, extensions of A* that reduce search effort and increase the number of problems solved, a study of graph automorphisms for state-space pruning in satisficing planning, comprehensive analysis of the symmetry properties of several popular existing heuristic functions , and how they can be used to enhance heuristic estimates, and an integration of partial order reduction and symmetry elimination for cost-optimal classical planning. The formal analysis of the concepts and algorithms is rigorous, and the empirical analysis shows that substantial computational gains can be achieved, especially in optimal planning.</p> </li>        
+      </ul>
+
+    </div>
+  </div>
+  </section>
+
+
+
+
       <section>
         <!--<header>
           <h1 class="top">ICAPS 2022 Conference Awards</h1>
         </header> -->
 
+      <div id="confaward"></div>
         <div class="row">
           <div class="12u 12u(mobile)">
 			<h1 class="top">ICAPS 2022 Conference Awards</h1>
@@ -56,8 +93,8 @@ permalink: awards
 			<div class="paper"><span class="title">Flexible FOND HTN Planning: A Complexity Analysis</span><br/>
 			    <span class="authors">Dillon Z. Chen and Pascal Bercher</span></div>
 	
+    </div>
 		</div>
-	</div>
 	</section>
 
 
@@ -69,7 +106,7 @@ permalink: awards
 
         <div class="row">
           <div class="12u 12u(mobile)">
-			<h1 class="top">ICAPS 2022 Best PC and SPC Awards</h1>
+			<h1 class="top">ICAPS 2022 Outstanding PC and SPC Awards</h1>
 			<h3>Outstanding Senior Program Committee Members:</h3>
             <ul>
               <li>Pascal Bercher</li>
@@ -84,9 +121,10 @@ permalink: awards
               <li>Sandhya Subramaniam (Human-Aware Planning and Scheduling Track)</li>
             </ul>
 	
-		      </section>
 		</div>
 	</div>
+          </section>
 
+</div>
 </div>
 </div>
