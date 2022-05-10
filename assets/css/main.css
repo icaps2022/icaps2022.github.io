@@ -1,4 +1,4 @@
-/*   
+/*
     Halcyonic by HTML5 UP
     MODIFIED: By www.kristietaylor-muise.ca for ICAPS 2016
     MODIFIED: By Ron Alford for ICAPS 2017
@@ -90,7 +90,7 @@ table.schedule td.time, table.schedule td.notime {
 }
 
 table.schedule td.invited-talk {
-    background: #D2D2D2; 
+    background: #D2D2D2;
 	font-weight: bold;
 }
 
@@ -234,7 +234,7 @@ body {
     text-decoration: line-through;
 }
 
-/*COLOUR PALATTE  
+/*COLOUR PALATTE
 Can change to suit ICAPS branding
 ********************************************************************************/
 body {
@@ -258,7 +258,7 @@ html, #header-wrapper, #titleBar .toggle, #navPanel .link {
 }
 
 #navPanel, #titleBar {
-  background:#2A2F33;  
+  background:#2A2F33;
 }
 
 #header nav a, #header nav li {
@@ -278,7 +278,7 @@ html, #header-wrapper, #titleBar .toggle, #navPanel .link {
 }
 
 a.button{
-    background: #5E7B98;   
+    background: #5E7B98;
 }
 
 a.button:hover {
@@ -329,7 +329,7 @@ strong {
     font-weight:700;
 }
 
-ul, ol, p, dl {    
+ul, ol, p, dl {
     margin: 0 0 1.3em 0;
 }
 
@@ -348,7 +348,7 @@ blockquote, q {
 }
 
 blockquote a {
-   text-decoration:none; 
+   text-decoration:none;
    border-bottom: 1px solid;
 }
 
@@ -359,7 +359,7 @@ blockquote a:hover {
 section > :last-child,.last-child {
      margin-bottom: 0 !important;
 }
-        
+
 img {
     width:100%;
 }
@@ -376,7 +376,7 @@ h1, h2, h3, h4, h5 {
 h1 {
     font-size: 1.5em;
     font-weight:700;
-    
+
 }
 
 h2 {   /* This is for tight grey subheadings */
@@ -487,7 +487,7 @@ ul {
 
 #copyright {
     text-align: center;
-    padding:1.5em;				
+    padding:1.5em;
 }
 
 .social-list a {
@@ -528,11 +528,11 @@ nav {
   float:right;
   position: relative;
   bottom: 0;
-}   
+}
 
 /* http://cssdeck.com/labs/another-simple-css3-dropdown-menu */
 
-nav ul {   
+nav ul {
     text-align:left;
     display:inline;
 }
@@ -543,7 +543,7 @@ nav ul li {
     list-style-type:none;
     /*margin-right: -4px;*/
     font-size: 1em;
-    font-weight: 400;    
+    font-weight: 400;
     -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -570,22 +570,22 @@ nav ul li ul {
     width:150px;
     opacity: 0;
     visibility: hidden;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
-nav ul li ul li {    
-    display: block;     
-    z-index: 10; 
+nav ul li ul li {
+    display: block;
+    z-index: 10;
 }
 
 nav ul li ul li a {
-    color: #fff; 
-    background: #555;     
+    color: #fff;
+    background: #555;
     padding:10px 20px;
 }
 
-nav ul li ul li a:hover { 
-    background: #666; 
+nav ul li ul li a:hover {
+    background: #666;
 }
 
 nav ul li:hover ul {
@@ -604,7 +604,7 @@ nav ul li:hover ul {
     background-position: center top;
     background-size: 100%;
     padding-top:3em;
-    min-height:280px; 
+    min-height:280px;
 }
 
 #banner {
@@ -615,7 +615,7 @@ nav ul li:hover ul {
     background-position: center;
     background-size: 100%;
     padding-top:3em;
-    min-height:280px; 
+    min-height:280px;
 }
 
 #banner p, #banner-main p {
@@ -657,6 +657,15 @@ nav ul li:hover ul {
 
 #header-wrapper {
 	z-index: 1;
+}
+
+
+.sponsor {
+        padding: 20px;
+}
+
+.sponsor img {
+        width: 200px;
 }
 
 /*CALL FOR PROPOSALS PAGE
@@ -709,7 +718,7 @@ ol {
 .container.\32 5\25 {
     width: 240px;
 }
-*/	
+*/
 
 .row {
         border-bottom: solid 1px transparent;
@@ -966,7 +975,7 @@ ol {
 .\-1u {
         margin-left: 8.33333%;
 }
-        
+
 /*MEDIA QUERIES
 ********************************************************************************/
 
@@ -992,7 +1001,7 @@ ol {
 }
 
 @media screen and (min-width: 1000px) {
-   
+
 }
 
 /* Above Mobile */
@@ -1002,13 +1011,13 @@ ol {
     /* Basic */
 
     /* NAV */
-    
+
     #titleBar, #navPanel {
-       display:none; 
+       display:none;
     }
 
     /* Header */
-    
+
      #icaps-logo {
         max-width:180px;
     }
@@ -1029,18 +1038,18 @@ ol {
     body, input, textarea, select {
         font-size: 0.8em;
         line-height: 1.45em;
-    } 
+    }
 
     table.schedule td.invited-talk {
-        background:none; 
+        background:none;
     }
 
     table.schedule td.break, table.schedule td.lunch {
-        background:none; 
+        background:none;
     }
 
     table.schedule td.opening-remarks, table.schedule td.contest-results, table.schedule td.posters, table.schedule td.community-meeting, table.schedule td.banquet, table.schedule td.conference-end {
-        background:none; 
+        background:none;
     }
 
     table.schedule td.notime {
@@ -1054,13 +1063,13 @@ ol {
         background: #9C9C9C;
         color: #fff;
     }
-    
+
 
 table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.schedule td.opening-remarks, table.schedule td.contest-results, table.schedule td.notime, table.schedule td.posters, table.schedule td.invited-talk, table.schedule td.community-meeting, table.schedule td.banquet, table.schedule td.conference-end {
         width:100% !important;
-        display:block;    
-        margin:1em 0;    
-    }                
+        display:block;
+        margin:1em 0;
+    }
 
     /* Wrappers */
 
@@ -1081,7 +1090,7 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
     #header {
        display:none;
     }
-    
+
     #icaps-logo {
         max-width:100px;
         right:0;
@@ -1092,7 +1101,7 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
         position: relative;
         text-align: center;
     }
-    
+
     #banner p, #banner-main p {
         font-size: 1.75em;
         line-height: 1.25em;
@@ -1100,13 +1109,13 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
         background: rgba(42, 47, 51, 0.76);
         padding: 0.5em;
     }
-              
-    .depth-1 { 
+
+    .depth-1 {
         margin-left:2em;
     }
 
     /* Content */
-    
+
     blockquote, q {
         font-size: 1.35em;
     }
@@ -1122,7 +1131,7 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
 
     #content h3 {
         font-size: 1em;
-    }      
+    }
 
     /* Footer */
 
@@ -1164,7 +1173,7 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
         z-index: 10001;
         color: #fff;
     }
-    
+
     #titleBar .toggle {
         position: absolute;
         left: 0;
@@ -1226,7 +1235,7 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
         font-size: 1.25em;
         line-height: 2em;
         padding: 0.5em 1.5em 0.5em 1.5em;
-        border-top: solid 1px #373d40;        
+        border-top: solid 1px #373d40;
     }
 
     #navPanel .link:first-child {
@@ -1259,10 +1268,10 @@ table.schedule td.time, table.schedule td.break, table.schedule td.lunch, table.
     }
 
 }
-        
+
 /*GRID MEDIA QUERIES
 ********************************************************************************/
-        
+
     @media screen and (min-width: 737px) {
 
     .row > * {
