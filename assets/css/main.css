@@ -94,7 +94,7 @@ table.schedule td.invited-talk {
 	font-weight: bold;
 }
 
-table.schedule td.break, table.schedule td.lunch {
+table.schedule td.break, table.schedule td.lunch, td.misc {
     background:#FFF9DB;
 }
 
