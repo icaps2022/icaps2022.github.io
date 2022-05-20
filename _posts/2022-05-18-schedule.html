@@ -40,14 +40,14 @@ layout: page
           {% endif %}
           {% if row.Type == "Joint" %}
             <tr>
-              <td>{{row.Time}}</td>
-              <td colspan="2">{{row.Session1}}</td>
+              <td>{{row.Time}}:00 UTC</td>
+              <td colspan="2">{% if row.Session1 contains 'Invited Talk' %}<a href="/#{{row.Session2}}">{% endif %}{{row.Session1}}{% if row.Session1 contains 'Invited Talk' %}</a>{% endif %}</td>
             </tr>
           {% elsif row.Type == "Single" %}
             <tr>
-              <td>{{row.Time}}</td>
+              <td>{{row.Time}}:00 UTC</td>
               <td><a href="#{{row.Session1 | slugify}}">{{row.Session1_title}}</a></td>
-              <td><a href="#{{row.Session1 | slugify}}">{{row.Session2_title}}</a></td>
+              <td><a href="#{{row.Session2 | slugify}}">{{row.Session2_title}}</a></td>
             </tr>
           {% endif %}
 
@@ -70,25 +70,25 @@ layout: page
         {% endif %}
         {% if row.Type == "Joint" %}
           {% if row.Session1 contains 'Opening' %}
-          <tr><td class="time">{{row.Time}}</td><td class="opening-remarks">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="opening-remarks">{{row.Session1}}</td></tr>
           {% elsif row.Session1 contains 'Invited Talk' %}
-          <tr><td class="time">{{row.Time}}</td><td class="invited-talk">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="invited-talk"><a href="/#{{row.Session2}}">{{row.Session1}}</a></td></tr>
           {% elsif row.Session1 contains 'Social' %}
-          <tr><td class="time">{{row.Time}}</td><td class="misc">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="misc">{{row.Session1}}</td></tr>
           {% elsif row.Session1 contains 'Diversity' %}
-          <tr><td class="time">{{row.Time}}</td><td class="misc">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="misc">{{row.Session1}}</td></tr>
           {% elsif row.Session1 contains 'Panel' %}
-          <tr><td class="time">{{row.Time}}</td><td class="invited-talk">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="invited-talk">{{row.Session1}}</td></tr>
           {% elsif row.Session1 contains 'Poster' %}
-          <tr><td class="time">{{row.Time}}</td><td class="posters">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="posters">{{row.Session1}}</td></tr>
           {% else %}
-          <tr><td class="time">{{row.Time}}</td><td class="misc">{{row.Session1}}</td></tr>
+          <tr><td class="time">{{row.Time}}:00 UTC</td><td class="misc">{{row.Session1}}</td></tr>
           {% endif %}
         {% elsif row.Type == "Single" %}
-        <tr id="{{row.Session1 | slugify}}">
-            <td class="time">{{row.Time}}</td>
-            <td class="session-title session-talk1">{{row.Session1_title}}</td>
-            <td class="session-title session-talk2">{{row.Session2_title}}</td>
+        <tr>
+            <td class="time">{{row.Time}}:00 UTC</td>
+            <td id="{{row.Session1 | slugify}}" class="session-title session-talk1">({{row.Session1}}) {{row.Session1_title}}</td>
+            <td id="{{row.Session2 | slugify}}" class="session-title session-talk2">({{row.Session2}}) {{row.Session2_title}}</td>
           </tr>
           {% assign session11 = (site.data.paper_details | where:"Session1",row.Session1) %}
           {% assign session12 = (site.data.paper_details | where:"Session2",row.Session1) %}
