@@ -40,11 +40,8 @@ RED = [
 ]
 
 ROWSPAN = {
-    'Poster and Demo Session': 2,
     'Community Meeting': 2,
     'User Interfaces for Explainable Planning': 2,
-    'Competition Panel': 2,
-    'Invited Talk: Sidd Srinivasa': 2,
     '31a': 2,
     '31b': 2,
 }
@@ -77,7 +74,7 @@ for slot in range(19):
     print(f'<td id="slot-{slot+6}">{slot+6}</td>', end='')
     for day in range(1,5):
         if f'{day}' not in data[slot]:
-            print(f'<td></td>', end='')
+            print('<td></td><td></td>', end='')
         else:
             line = data[slot][f'{day}']
             rowspan = 1
@@ -99,5 +96,7 @@ for slot in range(19):
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}">{line[5]}</td>', end='')
             elif line[4] == 'Single':
                 print(f'<td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[5]}">({line[5]}) {line[7]}</a></td><td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[6]}">({line[6]}) {line[8]}</a></td>', end='')
+            elif line[4] == 'Empty':
+                print('<td colspan="2"></td>', end='')
     print('</tr>')
 print('</table>')
