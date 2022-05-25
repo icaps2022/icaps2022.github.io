@@ -31,7 +31,10 @@ GREEN = [
 
 BLUE = [
     'Poster and Demo Session',
-    'Opening',
+    'Opening'
+]
+
+RED = [
     'Competition Panel',
     'Industry Panel'
 ]
@@ -56,9 +59,9 @@ print("""
 <!-- Dropdown selection of time zone -->
 <select id="timezone-selector" onchange="updateTimezone()">
 <option value="0">UTC</option>
-<option value="8">SGP</option>
-<option value="10">ACT</option>
-<option value="2">PAR</option>
+<option value="8">Singapore</option>
+<option value="10">Canberra</option>
+<option value="2">Paris</option>
 <option value="20">NYC</option>
 <option value="17">LA</option>
 </select>
@@ -88,11 +91,13 @@ for slot in range(19):
                     style = 'background-color: #c7f2ff;'
                 elif line[5] in GREEN:
                     style = 'background-color: #e8ffea;'
+                elif line[5] in RED:
+                    style = 'background-color: #fdcdcd;'
                 if 'Invited Talk' in line[5]:
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/#{line[6]}">{line[5]}</a></td>', end='')
                 else:
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}">{line[5]}</td>', end='')
             elif line[4] == 'Single':
-                print(f'<td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[5]}">{line[7]}</a></td><td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[6]}">{line[8]}</a></td>', end='')
+                print(f'<td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[5]}">({line[5]}) {line[7]}</a></td><td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[6]}">({line[6]}) {line[8]}</a></td>', end='')
     print('</tr>')
 print('</table>')
