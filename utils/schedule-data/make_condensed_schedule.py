@@ -51,7 +51,19 @@ print('<table class="schedule-overview" style="min-width: 965px;">')
 # Table header with dates from June 21st to June 24th
 print('<thead>')
 print('<tr style="background-color: rgb(42, 47, 51); color: #F2F5F5;">')
-print('<th style="padding: 10px;">UTC</th>')
+print("""
+<th style="padding: 10px;">
+<!-- Dropdown selection of time zone -->
+<select id="timezone-selector" onchange="updateTimezone()">
+<option value="0">UTC</option>
+<option value="8">SGP</option>
+<option value="10">ACT</option>
+<option value="2">PAR</option>
+<option value="20">NYC</option>
+<option value="17">LA</option>
+</select>
+</th>
+""")
 for i in range(21, 25):
     print(f'<th colspan="2">June {i}</th>')
 print('</tr>')
@@ -59,7 +71,7 @@ print('</thead>')
 
 for slot in range(19):
     print('<tr>', end='')
-    print(f'<td>{slot+6}</td>', end='')
+    print(f'<td id="slot-{slot+6}">{slot+6}</td>', end='')
     for day in range(1,5):
         if f'{day}' not in data[slot]:
             print(f'<td></td>', end='')
