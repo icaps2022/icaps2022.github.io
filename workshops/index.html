@@ -45,6 +45,7 @@ layout: page
 
       <div id="day-nav">
         <ul>
+          <li class="day-link" id="day-all"><a href="#"onclick="return false;">All Days</a></li>
           <li class="day-link" id="day-13"><a href="#" onclick="return false;">June 13th</a></li>
           <li class="day-link" id="day-14"><a href="#" onclick="return false;">June 14th</a></li>
           <li class="day-link" id="day-15"><a href="#" onclick="return false;">June 15th</a></li>
@@ -53,6 +54,7 @@ layout: page
         </ul>
       </div>
 
+      <a href="/images/schedule/full.png"><img class="day-img" id="day-all-img" src="/images/schedule/full.png"></a>
       <img class="day-img" id="day-13-img" src="/images/schedule/13.png">
       <img class="day-img" id="day-14-img" src="/images/schedule/14.png">
       <img class="day-img" id="day-15-img" src="/images/schedule/15.png">
@@ -87,8 +89,8 @@ layout: page
   $( document ).ready(function() {
     console.log( "ready!" );
     $('.day-img').hide();
-    $('#day-13-img').show();
-    $('#day-13 a').css('background-color', '#ddd');
+    $('#day-all-img').show();
+    $('#day-all a').css('background-color', '#ddd');
     $('.day-link').click(function() {
       $('.day-img').hide();
       $('#' + $(this).attr('id') + '-img').show();
