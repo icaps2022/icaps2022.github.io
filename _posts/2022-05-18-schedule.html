@@ -5,7 +5,7 @@ layout: page
 ---
 <div class="container">
   <div class="row">
-    <div class="12u 12u(mobile)">
+    <div class="9u 12u(mobile)">
       <!-- <section id="schedule-pdf">
         <header>
           <h1>ICAPS-2022 Schedule (PDF Format)</h1>
@@ -26,50 +26,33 @@ layout: page
           </table>
         -->
 
-        <table class="schedule-overview" style="min-width: 965px;">
-          <thead>
-          <tr style="background-color: rgb(42, 47, 51); color: #F2F5F5;">
+        {% assign day = 0 %}
+        {% assign started = false %}
+        {% for row in site.data.icaps_schedule_details %}
+          {% if row.Day != day %}
+            {% assign day = row.Day %}
+            {% if started %}
+              </table>
+            {% endif %}
+            {% assign started = true %}
+            <h3><a class="schedule-date" href="#{{row.Weekday | slugify}}">{{row.Weekday}}</a></h3>
+            <table class="schedule-overview">
+          {% endif %}
+          {% if row.Type == "Joint" %}
+            <tr>
+              <td>{{row.Time}}:00 UTC</td>
+              <td colspan="2">{% if row.Session1 contains 'Invited Talk' %}<a href="/#{{row.Session2}}">{% endif %}{{row.Session1}}{% if row.Session1 contains 'Invited Talk' %}</a>{% endif %}</td>
+            </tr>
+          {% elsif row.Type == "Single" %}
+            <tr>
+              <td>{{row.Time}}:00 UTC</td>
+              <td><a href="#{{row.Session1 | slugify}}">{{row.Session1_title}}</a></td>
+              <td><a href="#{{row.Session2 | slugify}}">{{row.Session2_title}}</a></td>
+            </tr>
+          {% endif %}
 
-          <th style="padding: 10px;">
-          <!-- Dropdown selection of time zone -->
-          <select id="timezone-selector" onchange="updateTimezone()">
-          <option value="0">UTC</option>
-          <option value="8">SGP</option>
-          <option value="10">ACT</option>
-          <option value="2">PAR</option>
-          <option value="20">NYC</option>
-          <option value="17">LA</option>
-          </select>
-          </th>
-
-          <th colspan="2">June 21</th>
-          <th colspan="2">June 22</th>
-          <th colspan="2">June 23</th>
-          <th colspan="2">June 24</th>
-          </tr>
-          </thead>
-          <tr><td id="slot-6">6</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="1">Opening</td></tr>
-          <tr><td id="slot-7">7</td><td style="background-color: #e8ffea;" colspan="2" rowspan="1"><a style="color: #900011;" href="/#helmert">Invited Talk: Malte Helmert</a></td><td rowspan="1"><a style="color: #900011;" href="#9a">Search</a></td><td rowspan="1"><a style="color: #900011;" href="#9b">Multi-Agent Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#18a">Classical Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#18b">Robotics</a></td><td style="background-color: #e8ffea;" colspan="2" rowspan="1"><a style="color: #900011;" href="/#miller">Invited Talk: Tim Miller</a></td></tr>
-          <tr><td id="slot-8">8</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Get Together</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Diversity Follow Up</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Games</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Open Discussion</td></tr>
-          <tr><td id="slot-9">9</td><td rowspan="1"><a style="color: #900011;" href="#1a">Planning Representations and Scheduling</a></td><td rowspan="1"><a style="color: #900011;" href="#1b">Verification</a></td><td rowspan="1"><a style="color: #900011;" href="#10a">Goal and Plan Recognition</a></td><td rowspan="1"><a style="color: #900011;" href="#10b">Scheduling Applications</a></td><td rowspan="1"><a style="color: #900011;" href="#19a">Expressivity and Complexity</a></td><td rowspan="1"><a style="color: #900011;" href="#19b">Path Finding</a></td><td rowspan="1"><a style="color: #900011;" href="#27a">Reformulation</a></td><td rowspan="1"><a style="color: #900011;" href="#27b">Probabilistic Planning</a></td></tr>
-          <tr><td id="slot-10">10</td><td rowspan="1"><a style="color: #900011;" href="#2a">Reinforcement Learning</a></td><td rowspan="1"><a style="color: #900011;" href="#2b">Heuristics in Classical Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#11a">Heuristics in Classical and Multi-Objective Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#11b">Applications</a></td><td rowspan="1"><a style="color: #900011;" href="#20a">Explainable Planning and Scheduling</a></td><td rowspan="1"><a style="color: #900011;" href="#20b">Heuristics and Heuristic Search</a></td><td rowspan="1"><a style="color: #900011;" href="#28a">Model-Based Reasoning in Classical Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#28b">Temporal Planning</a></td></tr>
-          <tr><td id="slot-11">11</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Competition Panel</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td></tr>
-          <tr><td id="slot-12">12</td></tr>
-          <tr><td id="slot-13">13</td><td rowspan="1"><a style="color: #900011;" href="#3a">Model-Based Reasoning in Classical Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#3b">Learning in Scheduling Applications</a></td><td rowspan="1"><a style="color: #900011;" href="#12a">Numeric Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#12b">Deep Learning</a></td><td style="background-color: #c7f2ff;" colspan="2" rowspan="1">Industry Panel</td><td rowspan="1"><a style="color: #900011;" href="#29a">Multi-Agent and Tree Search</a></td><td rowspan="1"><a style="color: #900011;" href="#29b">Motion Planning and Deep RL</a></td></tr>
-          <tr><td id="slot-14">14</td><td rowspan="1"><a style="color: #900011;" href="#4a">Search</a></td><td rowspan="1"><a style="color: #900011;" href="#4b">Optimal Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#13a">Epistemic Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#13b">Heuristics in Classical Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#21a">Applications</a></td><td rowspan="1"><a style="color: #900011;" href="#21b">Temporal Planning and Reinforcement Learning</a></td><td style="background-color: #FFF9DB;" colspan="2" rowspan="2">Community Meeting</td></tr>
-          <tr><td id="slot-15">15</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Diversity</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Pseudonym Get Together</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Pub Quiz</td><td></td></tr>
-          <tr><td id="slot-16">16</td><td rowspan="1"><a style="color: #900011;" href="#5a">Problem Reformulation</a></td><td rowspan="1"><a style="color: #900011;" href="#5b">Heuristics and Heuristic Search</a></td><td style="background-color: #e8ffea;" colspan="2" rowspan="1"><a style="color: #900011;" href="/#brunskill">Invited Talk: Emma Brunskill</a></td><td rowspan="1"><a style="color: #900011;" href="#22a">Reinforcement Learning</a></td><td rowspan="1"><a style="color: #900011;" href="#22b">Robotics</a></td><td rowspan="1"><a style="color: #900011;" href="#30a">Scheduling</a></td><td rowspan="1"><a style="color: #900011;" href="#30b">Heuristics in Classical Planning</a></td></tr>
-          <tr><td id="slot-17">17</td><td rowspan="1"><a style="color: #900011;" href="#6a">Multi-Agent Path Finding</a></td><td rowspan="1"><a style="color: #900011;" href="#6b">Deep Learning</a></td><td rowspan="1"><a style="color: #900011;" href="#14a">Search</a></td><td rowspan="1"><a style="color: #900011;" href="#14b">Verification</a></td><td rowspan="1"><a style="color: #900011;" href="#23a">Abstraction Heuristics</a></td><td rowspan="1"><a style="color: #900011;" href="#23b">Reinforcement Learning</a></td><td rowspan="2"><a style="color: #900011;" href="#31a">User Interfaces for Explainable Planning</a></td><td rowspan="2"><a style="color: #900011;" href="#31b">Scheduling</a></td></tr>
-          <tr><td id="slot-18">18</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td><td style="background-color: #e8ffea;" colspan="2" rowspan="2"><a style="color: #900011;" href="/#srinivasa">Invited Talk: Sidd Srinivasa</a></td><td></td></tr>
-          <tr><td id="slot-19">19</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Closing and Final Get Together</td></tr>
-          <tr><td id="slot-20">20</td><td rowspan="1"><a style="color: #900011;" href="#7a">Probabilistic Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#7b">Multi-Agent Planning and Scheduling</a></td><td rowspan="1"><a style="color: #900011;" href="#15a">Planning Decompositions and Learning</a></td><td rowspan="1"><a style="color: #900011;" href="#15b">Explainable Planning and Scheduling</a></td><td rowspan="1"><a style="color: #900011;" href="#24a">Reinforcement Learning in Applications</a></td><td rowspan="1"><a style="color: #900011;" href="#24b">User Interactions and Top-Quality Planning</a></td></tr>
-          <tr><td id="slot-21">21</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Speed Dating</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Pseudonym Get Together</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Open Discussion</td></tr>
-          <tr><td id="slot-22">22</td><td rowspan="1"><a style="color: #900011;" href="#8a">Hierarchical Task Networks</a></td><td rowspan="1"><a style="color: #900011;" href="#8b">Rewards in Reinforcement Learning</a></td><td rowspan="1"><a style="color: #900011;" href="#16a">Multi-Agent Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#16b">Reinforcement Learning</a></td><td rowspan="1"><a style="color: #900011;" href="#25a">Heuristic Search</a></td><td rowspan="1"><a style="color: #900011;" href="#25b">Epistemic Planning</a></td></tr>
-          <tr><td id="slot-23">23</td><td style="background-color: #e8ffea;" colspan="2" rowspan="1"><a style="color: #900011;" href="/#koenig">Invited Talk: Sven Koenig</a></td><td rowspan="1"><a style="color: #900011;" href="#17a">Applications</a></td><td rowspan="1"><a style="color: #900011;" href="#17b">Path and Motion Planning</a></td><td rowspan="1"><a style="color: #900011;" href="#26a">Heuristics</a></td><td rowspan="1"><a style="color: #900011;" href="#26b">Scheduling</a></td></tr>
-          <tr><td id="slot-24">24</td><td style="background-color: #FFF9DB;" colspan="2" rowspan="1">Social: Games</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td><td style="background-color: #c7f2ff;" colspan="2" rowspan="2">Poster and Demo Session</td></tr>
-          </table>
-
-
+        {% endfor %}
+        </table>
 
         <br/>
         <div id="detailed"></div>
@@ -147,14 +130,3 @@ layout: page
     </div>
   </div>
 </div>
-
-
-<script>
-function updateTimezone() {
-  var timezone = parseInt($('#timezone-selector').val());
-  for (let i = 6; i <= 24; i++) {
-    var time = (i + timezone) % 24;
-    $('#slot-' + i).text(time);
-  }
-}
-</script>
