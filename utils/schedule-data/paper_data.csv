@@ -77,7 +77,7 @@ paper_id,paper_authors,paper_title,paper_track,paper_presenter_utc,paper_present
 282,"Abhinav Bhatia, Justin Svegliato, Samer Nashed and Shlomo Zilberstein",Tuning the Hyperparameters of Anytime Planning: A Metareasoning Approach with Deep Reinforcement Learning,Planning and Learning Track,-5,Abhinav Bhatia,16b,23b
 303,"Rui Wang, Kai Gao, Jingjin Yu and Kostas Bekris",Lazy Rearrangement Planning in Confined Spaces,Main Track,-4,Rui Wang,17b,22b
 304,"Alvaro Velasquez, Brett Bissey, Lior Barak, Daniel Melcer, Andre Beckus, Ismail Alkhouri and George Atia",Multi-Agent Tree Search with Dynamic Reward Shaping,Planning and Learning Track,-5,Alvaro Velasquez,16a,29a
-308,"Yi Zheng, Srivatsan Ravi, Erik Kline, Sven Koenig and T. K. Satish Kumar",Conflict-Based Search for Virtual Network Embedding,Main Track,-8,Yi Zheng,6a,16a
+308,"Yi Zheng, Srivatsan Ravi, Erik Kline, Sven Koenig and T. K. Satish Kumar",Conflict-Based Search for the Virtual Network Embedding Problem,Main Track,-8,Yi Zheng,6a,16a
 314,"Noah Topper, George Atia, Ashutosh Trivedi and Alvaro Velasquez",Active Grammatical Inference for Non-Markovian Planning,Planning and Learning Track,-4,Noah Topper,8b,21b
 321,"Karthik Valmeekam, Sarath Sreedharan, Sailik Sengupta and Subbarao Kambhampati",RADAR-X: An Interactive Mixed Initiative Planning Interface Pairing Contrastive Explanations and Revised Plan Suggestions,Industry and Applications Track,-7,Karthik Valmeekam,15b,31a
 323,"Daniel Wang, Joseph Russino, Connor Basich and Steve Chien","Analyzing the Efficacy of Flexible Execution, Replanning, and Plan Optimization for a Planetary Lander",Industry and Applications Track,-7,Steve Chien,8a,22b
