@@ -93,9 +93,15 @@ for slot in range(19):
                 if 'Invited Talk' in line[5]:
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/#{line[6]}">{line[5]}</a></td>', end='')
                 else:
-                    print(f'<td style="{style}" colspan="2" rowspan="{rowspan}">{line[5]}</td>', end='')
+                    extend_by_20min = ""
+                    if line[5] == "Community Meeting":
+                        extend_by_20min = "<br /> (ends +20min)"
+                    print(f'<td style="{style}" colspan="2" rowspan="{rowspan}">{line[5]}{extend_by_20min}</td>', end='')
             elif line[4] == 'Single':
-                print(f'<td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[5]}">({line[5]}) {line[7]}</a></td><td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[6]}">({line[6]}) {line[8]}</a></td>', end='')
+                delay_by_20min = ""
+                if line[5] in ['30a', '31a']:
+                    delay_by_20min = "<br/><span style='color: #900011;'>(start: +20 min)</span>"
+                print(f'<td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[5]}">({line[5]}) {line[7]}</a>{delay_by_20min}</td><td rowspan="{rowspan}"><a style="color: #900011;" href="#{line[6]}">({line[6]}) {line[8]}</a>{delay_by_20min}</td>', end='')
             elif line[4] == 'Empty':
                 print('<td colspan="2"></td>', end='')
     print('</tr>')
