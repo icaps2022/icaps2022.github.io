@@ -10,7 +10,6 @@ for line in lines[1:]:
 
 YELLOW = [
     'Diversity',
-    'Career Development Panel',
     'Social: Get Together',
     'Social: Speed Dating',
     'Social: Games',
@@ -37,7 +36,8 @@ BLUE = [
 
 RED = [
     'Competition Panel',
-    'Industry Panel'
+    'Industry Panel',
+    'Career Development Panel',
 ]
 
 ROWSPAN = {
@@ -93,6 +93,8 @@ for slot in range(19):
                     style = 'background-color: #fdcdcd;'
                 if 'Invited Talk' in line[5]:
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/#{line[6]}">{line[5]}</a></td>', end='')
+                elif 'Panel' in line[5]:
+                    print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/panels#{line[6]}">{line[5]}</a></td>', end='')
                 else:
                     extend_by_20min = ""
                     if line[5] == "Community Meeting":

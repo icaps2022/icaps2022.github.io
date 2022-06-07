@@ -8,7 +8,7 @@ Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Sessi
 6,12,1,Tuesday 21,Empty,None,None,,,,
 7,13,1,Tuesday 21,Single,3a,3b,Model-Based Reasoning in Classical Planning,Learning in Scheduling Applications,"33, 55, 64","170, 222, 232"
 8,14,1,Tuesday 21,Single,4a,4b,Search,Optimal Planning,"54, 128, 184","78, 96, 229"
-9,15,1,Tuesday 21,Joint,Career Development Panel,Career Development Panel,,,,
+9,15,1,Tuesday 21,Joint,Career Development Panel,career,,,,
 10,16,1,Tuesday 21,Single,5a,5b,Problem Reformulation,Heuristics and Heuristic Search,"1, 65, 79","201, 240, 262"
 11,17,1,Tuesday 21,Single,6a,6b,Multi-Agent Path Finding,Deep Learning,"38, 153, 308","10, 66, 102"
 12,18,1,Tuesday 21,Joint,Poster and Demo Session,Poster and Demo Session,,,,
@@ -23,7 +23,7 @@ Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Sessi
 2,8,2,Wednesday 22,Joint,Social: Get Together,Social: Get Together,,,,
 3,9,2,Wednesday 22,Single,10a,10b,Goal and Plan Recognition,Scheduling Applications,"1, 79, 369","202, 222, 233"
 4,10,2,Wednesday 22,Single,11a,11b,Heuristics in Classical and Multi-Objective Planning,Applications,"110, 131, 180","196, 200, 353"
-5,11,2,Wednesday 22,Joint,Competition Panel,Competition Panel,,,,
+5,11,2,Wednesday 22,Joint,Competition Panel,competitions,,,,
 6,12,2,Wednesday 22,Empty,None,None,,,,
 7,13,2,Wednesday 22,Single,12a,12b,Numeric Planning,Deep Learning,"2, 221, 366","44, 113, 158"
 8,14,2,Wednesday 22,Single,13a,13b,Epistemic Planning,Heuristics in Classical Planning,"140, 351, 372","195, 208, 228"
@@ -44,7 +44,7 @@ Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Sessi
 4,10,3,Thursday 23,Single,20a,20b,Explainable Planning and Scheduling,Heuristics and Heuristic Search,"127, 192, 367","10, 201, 240"
 5,11,3,Thursday 23,Joint,Poster and Demo Session,Poster and Demo Session,,,,
 6,12,3,Thursday 23,Empty,None,None,,,,
-7,13,3,Thursday 23,Joint,Industry Panel,Industry Panel,,,,
+7,13,3,Thursday 23,Joint,Industry Panel,industry,,,,
 8,14,3,Thursday 23,Single,21a,21b,Applications,Temporal Planning and Reinforcement Learning,"130, 200, 233","93, 314, 368"
 9,15,3,Thursday 23,Joint,Social: Pub Quiz,Social: Pub Quiz,,,,
 10,16,3,Thursday 23,Single,22a,22b,Reinforcement Learning,Robotics,"154, 212, 373","303, 323, 324"
