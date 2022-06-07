@@ -10,6 +10,7 @@ for line in lines[1:]:
 
 YELLOW = [
     'Diversity',
+    'Career Development Panel',
     'Social: Get Together',
     'Social: Speed Dating',
     'Social: Games',
