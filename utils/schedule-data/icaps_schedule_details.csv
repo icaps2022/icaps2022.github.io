@@ -20,7 +20,7 @@ Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Sessi
 18,24,1,Tuesday 21,Joint,Social: Games,Social: Games,,,,
 0,6,2,Wednesday 22,Empty,None,None,,,,
 1,7,2,Wednesday 22,Single,9a,9b,Search,Multi-Agent Planning,"125, 128, 262","78, 96, 209"
-2,8,2,Wednesday 22,Joint,Social: Open Discussion,Social: Open Discussion,,,,
+2,8,2,Wednesday 22,Joint,Social: Get Together,Social: Get Together,,,,
 3,9,2,Wednesday 22,Single,10a,10b,Goal and Plan Recognition,Scheduling Applications,"1, 79, 369","202, 222, 233"
 4,10,2,Wednesday 22,Single,11a,11b,Heuristics in Classical and Multi-Objective Planning,Applications,"110, 131, 180","196, 200, 353"
 5,11,2,Wednesday 22,Joint,Competition Panel,Competition Panel,,,,
