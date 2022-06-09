@@ -17,6 +17,7 @@ YELLOW = [
     'Social: Pseudonym Get Together',
     'Social: Pub Quiz',
     'Social: Open Discussion',
+    'Social: Puzzle Game Team Challenge',
     'Community Meeting',
     'Closing and Final Get Together'
 ]
