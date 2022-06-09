@@ -46,7 +46,7 @@ Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Sessi
 6,12,3,Thursday 23,Empty,None,None,,,,
 7,13,3,Thursday 23,Joint,Industry Panel,industry,,,,
 8,14,3,Thursday 23,Single,21a,21b,Applications,Temporal Planning and Reinforcement Learning,"130, 200, 233","93, 314, 368"
-9,15,3,Thursday 23,Joint,Social: Pub Quiz,Social: Pub Quiz,,,,
+9,15,3,Thursday 23,Joint,Social: Puzzle Game Team Challenge,Social: Puzzle Game Team Challenge,,,,
 10,16,3,Thursday 23,Single,22a,22b,Reinforcement Learning,Robotics,"154, 212, 373","303, 323, 324"
 11,17,3,Thursday 23,Single,23a,23b,Abstraction Heuristics,Reinforcement Learning,"116, 139, 225","36, 145, 282"
 12,18,3,Thursday 23,Joint,Invited Talk: Sidd Srinivasa,srinivasa,,,,
