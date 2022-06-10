@@ -65,17 +65,6 @@
 					</li-->
 
 					<li><a href="/registration">Registration</a></li>
-					<!--li><a href="/venue.html">Attending</a>
-						<ul>
-        					<li><a class="sub-menu-" href="map.html">Map</a></li>
-		    				<li><a class="sub-menu-" href="directions.html">Getting Here</a></li>
-							<li><a class="sub-menu-" href="/venue.html">Venue</a></li>
-							<li><a class="sub-menu-" href="https://starrez.housing.cmu.edu/StarRezPortalConference/go/Conferences/ICAPS2017">Registration</a></li>
-							<li><a class="sub-menu-" href="/accommodation.html">Accommodation</a></li>
-							<li><a class="sub-menu-" href="/telepresence.html">Telepresence</a></li>
-							<li><a class="sub-menu-" href="/biking.html">Optional Biking</a></li>
-						</ul>
-					</li-->
 
 					<li><a href="">Committees</a>
 						<ul>
@@ -84,9 +73,25 @@
 						</ul>
 					</li>
 
+					<li><a href="/general-instructions">Attending</a>
+						<ul>
+							<li><a class="sub-menu-" href="/general-instructions">General</a></li>
+							<li><a class="sub-menu-" href="/gather">Gather Town</a></li>
+							<li><a class="sub-menu-" href="#" onclick="gostreams()">Live Streams</a></li>
+							<li><a class="sub-menu-" href="/zoom-meetings">Zoom</a></li>
+							<li><a class="sub-menu-" href="/social-events">Social Events</a></li>
+						</ul>
+					</li>
 
 				</ul>
 			</nav>
 		</div>
 	</div>
 </header>
+
+<script>
+	function gostreams() {
+	  let pwd = prompt("Please enter the password");
+	  window.location.href = "live-streams-" + pwd;
+	}
+</script>
