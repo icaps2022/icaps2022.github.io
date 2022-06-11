@@ -1,0 +1,71 @@
+---
+title: paper-55
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/hoeller_MT55.pdf','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 1</div1> <br><br>
+<div1> Day(1) Booth ID: 12</div1> <br><br>
+<div1> Poster Day(2) ID: 4</div1> <br><br>
+<div1> Day(2) Booth ID: 6</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#3a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#28a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Encoding Lifted Classical Planning in Propositional Logic</h1>
+        <h3>Daniel Höller and Gregor Behnke</h3>
+      </header>
+<b>Abstract:</b> Planning models are usually defined in lifted, i.e. first order formalisms, while most solvers need (variable-free) grounded representations. Though techniques for grounding prune unnecessary parts of the model, grounding might â nevertheless â be prohibitively expensive in terms of runtime. To overcome this issue, there has been renewed interest in solving planning problems based on the lifted representation in the last years. While these approaches are based on (heuristic) search, we present an encoding of lifted classical planning in propositional logic and use SAT solvers to solve it. Our evaluation shows that our approach is competitive with the heuristic search-based approaches in satisficing planning and outperforms them in a (length-)optimal setting.
+</section>
+  </div>
+  </div>
+</div>

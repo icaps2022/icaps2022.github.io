@@ -1,0 +1,71 @@
+---
+title: paper-151
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/ICAPS2022_paper_151_poster.jpg','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 1</div1> <br><br>
+<div1> Day(1) Booth ID: 25</div1> <br><br>
+<div1> Poster Day(2) ID: 4</div1> <br><br>
+<div1> Day(2) Booth ID: 19</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#2a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#29b','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Reinforcement Learning Approach to Solve Dynamic Bi-Objective Police Patrol Dispatching and Rescheduling Problem</h1>
+        <h3>Waldy Joe, Hoong Chuin Lau and Jonathan Pan</h3>
+      </header>
+<b>Abstract:</b> Police patrol aims to fulfill two main objectives namely to project presence and to respond to incidents in a timely manner. Incidents happen dynamically and can disrupt the initially-planned patrol schedules. The key decisions to be made will be which patrol agent to be dispatched to respond to an incident and subsequently how to adapt the patrol schedules in response to such dynamically-occurring incidents whilst still fulfilling both objectives; which sometimes can be conflicting. In this paper, we define this real-world problem as a Dynamic Bi-Objective Police Patrol Dispatching and Rescheduling Problem and propose a solution approach that combines Deep Reinforcement Learning (specifically neural networks-based Temporal-Difference learning with experience replay) to approximate the value function and a rescheduling heuristic based on ejection chains to learn both dispatching and rescheduling policies jointly. To address the dual objectives, we propose a reward function that implicitly tries to maximize the rate of successfully responding to an incident within a response time target while minimizing the reduction in patrol presence without the need to explicitly set predetermined weights for each objective. The proposed approach is able to compute both dispatching and rescheduling decisions almost instantaneously. Our work serves as the first work in the literature that takes into account these dual patrol objectives and real-world operational consideration where incident response may disrupt existing patrol schedules.
+</section>
+  </div>
+  </div>
+</div>
