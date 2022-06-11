@@ -1,0 +1,71 @@
+---
+title: paper-196
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/TP196_poster_SatelliteConditionalPlans.pdf','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 2</div1> <br><br>
+<div1> Day(1) Booth ID: 28</div1> <br><br>
+<div1> Poster Day(2) ID: 4</div1> <br><br>
+<div1> Day(2) Booth ID: 23</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#11b','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#31b','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Building resource-dependent conditional plans for an Earth monitoring satellite</h1>
+        <h3>Cédric Pralet, David Doose, Julien Anxionnat and Jérémie Pouly</h3>
+      </header>
+<b>Abstract:</b> This paper introduces a conditional planning and execution system for an Earth monitoring satellite. This system builds plans containing optional acquisitions that are activated or not at execution time depending on the amount of energy actually available. One originality is that the energy activation thresholds computed on the ground take into account the capacity of the satellite to use an heliocentric pointing or switch off the payload when acquisitions are canceled. Another originality is that the conditional planner proposed uses several energy propagation models, from conservative models containing margins on power production to optimistic models that allow opportunistic acquisitions to be planned.
+</section>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+---
+title: paper-136
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/Poster_talking_trucks.jpg','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 1</div1> <br><br>
+<div1> Day(1) Booth ID: 24</div1> <br><br>
+<div1> Poster Day(2) ID: 4</div1> <br><br>
+<div1> Day(2) Booth ID: 17</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#7b','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#30a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Talking Trucks: Decentralized Collaborative Multi-Agent Order Scheduling for Self-Organizing Logistics</h1>
+        <h3>Geert Leonardus Johannes Pingen, Christian Rijk van Ommeren, Cornelis Jan van Leeuwen, Ruben Fransen, Tijmen Elfrink, Yorick Christiaan de Vries, Janarthanan Karunakaran, Emir Demirović and Neil Yorke-Smith</h3>
+      </header>
+<b>Abstract:</b> Logistics planning is a complex optimization problem involving multiple decision makers. Automated scheduling systems offer support to human planners; however state-of-the-art approaches often employ a centralized control paradigm. While these approaches have shown great value, their application is hindered in dynamic settings with no central authority. Motivated by real-world scenarios, we present a decentralized approach to collaborative multi-agent scheduling by casting the problem as a Distributed Constraint Optimization Problem (DCOP). Our model-based heuristic approach uses message passing with a novel pruning technique to allow agents to cooperate on mutual agreement, leading to a near-optimal solution while offering low computational costs and flexibility in case of disruptions. Performance is evaluated in three real-world field trials with a logistics carrier and compared against a centralized model-free Deep Q-Network (DQN)-based Reinforcement Learning (RL) approach, a Mixed-Integer Linear Programming (MILP)-based solver, and both human and heuristic baselines. The results demonstrate that it is feasible to have virtual agents make autonomous decisions using our DCOP method, leading to an efficient distributed solution. To facilitate further research in Self-Organizing Logistics (SOL), we provide a novel real-life dataset.
+</section>
+  </div>
+  </div>
+</div>

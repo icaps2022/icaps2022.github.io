@@ -1,0 +1,71 @@
+---
+title: paper-170
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/TP170_poster_heterogeneous_gnn_maintenance_scheduling.pdf','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 1</div1> <br><br>
+<div1> Day(1) Booth ID: 29</div1> <br><br>
+<div1> Poster Day(2) ID: 2</div1> <br><br>
+<div1> Day(2) Booth ID: 24</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#3b','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#17a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Stochastic Resource Optimization over Heterogeneous Graph Neural Networks for Failure-Predictive Maintenance Scheduling</h1>
+        <h3>Zheyuan Wang and Matthew Gombolay</h3>
+      </header>
+<b>Abstract:</b> Resource optimization for predictive maintenance is a challenging computational problem that requires inferring and reasoning over stochastic failure models and dynamically allocating repair resources. Predictive maintenance scheduling is typically performed with a combination of ad hoc, hand-crafted heuristics with manual scheduling corrections by human domain experts, which is a labor-intensive process that is hard to scale. In this paper, we develop an innovative heterogeneous graph neural network to automatically learn an end-to-end resource scheduling policy. Our approach is fully graph-based with the addition of state summary and decision value nodes that provides a computationally lightweight and nonparametric means to perform dynamic scheduling. We augment our policy optimization procedure to enable robust learning in highly stochastic environments for which typical actor-critic reinforcement learning methods are ill-suited. In consultation with aerospace industry partners, we develop a virtual predictive-maintenance environment for a heterogeneous fleet of aircraft, called AirME. Our approach sets a new state-of-the-art by outperforming conventional, hand-crafted heuristics and baseline learning methods across problem sizes and various objective functions.
+</section>
+  </div>
+  </div>
+</div>
