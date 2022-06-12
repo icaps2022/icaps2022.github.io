@@ -1,0 +1,73 @@
+---
+title: paper-130
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/130_ICAPS_Pricing_Matching_Poster.pdf','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 2</div1> <br><br>
+<div1> Day(1) Booth ID: 17</div1> <br><br>
+<div1> Poster Day(2) ID: 3</div1> <br><br>
+<div1> Day(2) Booth ID: 17</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#17a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#21a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Joint Pricing and Matching for City-Scale Ride-Pooling</h1>
+        <h3>Sanket Shah, Meghna Lowalekar and Pradeep Varakantham</h3>
+      </header>
+<b>Abstract:</b> Central to efficient ride-pooling are two challenges: (1) how to `price' customers' requests for rides, and (2) if the customer agrees to that price, how to best `match' these requests to drivers. While both of them are interdependent, each challenge's individual complexity has meant that, historically, they have been decoupled and studied individually.
+
+This paper creates a framework for batched pricing and matching in which pricing is seen as a meta-level optimisation over different possible matching decisions. Our key contributions are in developing a variant of the revenue-maximizing auction corresponding to the meta-level optimization problem, and then providing a scalable mechanism for computing posted prices. We test our algorithm on real-world data at city-scale and show that our algorithm reliably matches demand to supply across a range of parameters.
+</section>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+---
+title: paper-184
+layout: page
+---
+<head>
+<style>
+div1 {
+  background-color: lightgrey;
+  width: 30px;
+  border: 1px solid green;
+  padding: 5px;
+  margin: 1px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}.button2 {
+  background-color: white;
+  color: black; 
+  border: 2px solid red;
+}
+.button2:hover {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<div class='container'>
+  <div class='row'>
+      <div class='3u 12u(mobile)'>
+      <section>
+        <header>
+          <h3 class='top'>Links</h3>
+        </header>
+<!-- <button class='button button2' onclick=" window.open('nan','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>-->
+<button class='button button2' onclick=" window.open('http://icaps22.icaps-conference.org/posters/ICAPS 2022 - POSTER - 184 - Beyond Stars -- Generalized Topologies for Decoupled Search.pdf','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Poster</button><br><br>
+<div1> Poster Day(1) ID: 1</div1> <br><br>
+<div1> Day(1) Booth ID: 30</div1> <br><br>
+<div1> Poster Day(2) ID: 3</div1> <br><br>
+<div1> Day(2) Booth ID: 27</div1> <br><br>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#4a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 1</button>
+<button class='button button1' onclick=" window.open('http://icaps22.icaps-conference.org/schedule#18a','_blank')"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> Talk Session 2</button>
+</section>
+ </div>
+<div class='9u 12u(mobile)'>
+    <section>
+      <header>
+        <h1 class='top'>Beyond Stars - Generalized Topologies for Decoupled Search</h1>
+        <h3>Daniel Gnad, Álvaro Torralba and Daniel Fišer</h3>
+      </header>
+<b>Abstract:</b> Decoupled search decomposes a classical planning task by partitioning its variables such that the dependencies between the resulting factors form a star topology. In this topology, a single center factor can interact arbitrarily with a set of leaf factors. The leaves, however, can interact with each other only indirectly via the center. In this work, we generalize this structural requirement and allow arbitrary topologies. The components must not overlap, i.e., each state variable is assigned to exactly one factor, but the interaction between factors is not restricted. We show how this generalization is connected to star topologies, which implies the correctness of decoupled search with this novel type of decomposition. We introduce factoring methods that automatically identify these topologies on a given planning task. Empirically, the generalized factorings lead to increased applicability of decoupled search on standard IPC benchmarks, as well as to superior performance compared to known factoring methods.
+</section>
+  </div>
+  </div>
+</div>
