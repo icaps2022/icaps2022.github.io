@@ -1,4 +1,16 @@
-import csv, pprint
+import csv
+
+def fetch_times(row):
+  times = [
+    'Day 1: 11UTC',
+    'Day 1: 18UTC',
+    'Day 2: 18UTC',
+    'Day 2: 24UTC',
+    'Day 3: 11UTC',
+    'Day 3: 24UTC',
+    'Day 4: 11UTC',
+  ]
+  return ''.join([f'<li>{times[c]}</li>' for c in range(7) if 'x' in row[c+3].strip()])
 
 # load the data.csv with csv library
 data = {}
@@ -8,7 +20,8 @@ with open('data.csv') as f:
         data[row[0]] = {
             'authors': row[1],
             'title': row[2],
-            'pid': row[0]
+            'pid': row[0],
+            'times': fetch_times(row)
         }
 
 
@@ -19,6 +32,8 @@ TEMPLATE = """
             <h1>{title}</h1>
             <img src="{pid}.png" alt="{title}" />
             <h2>{authors}</h2>
+            <h3>Scheduled Sessions</h3>
+            <ul>{times}</ul>
             <a class="button float-right-button"
                 href="ICAPS_2022_paper_{pid}.pdf">Paper</a>
           </div>
