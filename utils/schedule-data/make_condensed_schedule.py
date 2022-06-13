@@ -12,6 +12,7 @@ YELLOW = [
     'Diversity',
     'Social: Get Together',
     'Social: Speed Dating',
+    'Social: Speed Gathering',
     'Social: Games',
     'Social: Diversity Follow Up',
     'Social: Pseudonym Get Together',
@@ -96,6 +97,8 @@ for slot in range(19):
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/#{line[6]}">{line[5]}</a></td>', end='')
                 elif 'Panel' in line[5]:
                     print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/panels#{line[6]}">{line[5]}</a></td>', end='')
+                elif 'Social' in line[5] and line[5] != 'Social: Get Together':
+                    print(f'<td style="{style}" colspan="2" rowspan="{rowspan}"><a style="color: #900011;" href="/social-events#{line[6]}">{line[5]}</a></td>', end='')
                 else:
                     extend_by_20min = ""
                     if line[5] == "Community Meeting":
