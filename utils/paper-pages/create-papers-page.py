@@ -34,8 +34,8 @@ for i in range(len(linkData['Paper ID'])):
 	if not isNaN(str(linkData['Paper ID'][i])):
 		paper_id = linkData['Paper ID'][i]
 		pdflink = ""
-		if int(paper_id) < 351:
-			pdflink = pdfData['pdf link'][list(pdfData['Paper ID']).index(str(int(paper_id)))]
+		# if int(paper_id) < 351:
+		pdflink = pdfData['pdf link'][list(pdfData['Paper ID']).index(str(int(paper_id)))]
 
 		if not os.path.exists('../../papers/'+str(int(linkData['Paper ID'][i]))+'/'):
 			os.mkdir('../../papers/'+str(int(linkData['Paper ID'][i]))+'/')
@@ -58,8 +58,8 @@ for i in range(len(linkData['Paper ID'])):
 		f2.write(".button2 {\n  background-color: white;\n  color: black; \n  border: 2px solid red;\n}\n.button2:hover {\n  background-color: red;\n  color: white;\n}\n</style>\n</head>\n")
 
 		f2.write("<div class='container'>\n  <div class='row'>\n      <div class='3u 12u(mobile)'>\n      <section>\n       ")
-		if int(paper_id) < 351:
-			f2.write("<button class='button button2' onclick=\" window.open('"+pdflink+"','_blank')\"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>\n")
+		# if int(paper_id) < 351:
+		f2.write("<button class='button button2' onclick=\" window.open('"+pdflink+"','_blank')\"><input type='image' src='../../images/hyperlink-logo.png' width='14' height='13'> PDF</button>\n")
 
 		f2.write("<br><br><h3 class='top'>Talk Sessions: </h3>\n")
 		f2.write("<button class='button button1' onclick=\" window.open('"+str('http://icaps22.icaps-conference.org/schedule#')+str(scheduleData["Session1"][schedule_paper_ID_index])+"','_blank')\"><input type='image' src='../../images/hyperlink-blue.png' width='14' height='13'>June "+str(20+int(scheduleData["Session1_date"][schedule_paper_ID_index]))+", Session "+str(scheduleData["Session1"][schedule_paper_ID_index])+"</button>\n")
