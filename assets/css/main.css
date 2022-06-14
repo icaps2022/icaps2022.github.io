@@ -116,7 +116,8 @@ li.groupby.year { display: none; }
 li.groupby.type { display: none; }
 li.groupby.downloads { display: none; }
 
-.bibbase_paper_content .bibtex { display: none; }
+/* .bibbase_paper_content .bibtex { display: none; } */
+.bibbase_page { display: none; }
 
 .bibbase_paper_title { display: block; }
 

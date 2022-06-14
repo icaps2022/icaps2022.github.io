@@ -11,18 +11,7 @@ layout: page
         <header>
           <h3 class="top">Demos</h3>
         </header>
-        <ul class="check-list">
-          <li><a href="#demo-370">Hierarchic Language Abstractions Model</a></li>
-          <li><a href="#demo-374">ProSeqqo: Open-source Solver for Robotic Task Sequencing</a></li>
-          <li><a href="#demo-375">CALDERA: A Red-Blue Cyber Operations Automation Platform</a></li>
-          <li><a href="#demo-376">Planning Tech for Planning Pedagogy</a></li>
-          <li><a href="#demo-377">Planutils: Bringing Planning to the Masses</a></li>
-          <li><a href="#demo-378">MACQ: A Unified Library for Action Model Acquisition</a></li>
-          <li><a href="#demo-379">Unified Planning: A Python Library Making Planning Technology Accessible</a></li>
-          <li><a href="#demo-381">Plan Visualisation with PDSim</a></li>
-          <li><a href="#demo-382">Machetli: Simplifying Input Files for Debugging</a></li>
-          <li><a href="#demo-384">MAES, a Realistic Simulator for Multi Agent Exploration and Coverage</a></li>
-        </ul>
+        <ul id="demo-link-list" class="check-list"></ul>
       </section>
     </div>
 
@@ -46,6 +35,16 @@ layout: page
 
     // Remove them from the demo-list div's
     demos.detach();
+
+    // Iterate over the demos
+    for (var i=0; i<5; i++) {
+      var id = demos[i].id;
+      var title = demos[i].getElementsByTagName('h1')[0].innerHTML;
+      $('#demo-link-list').append('<li><a href="#' + id + '">' + title + '</a></li>');
+      id = demos[i+5].id;
+      title = demos[i+5].getElementsByTagName('h1')[0].innerHTML;
+      $('#demo-link-list').append('<li><a href="#' + id + '">' + title + '</a></li>');
+    }
 
     // Add the first 5 to the demo-list-1 div
     $('#demo-list-1').append(demos.slice(0, 5));
