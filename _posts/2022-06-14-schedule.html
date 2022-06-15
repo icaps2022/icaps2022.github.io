@@ -63,6 +63,20 @@ layout: page
           <tr><td class="time">{{row.Time}}:00 UTC</td><td class="misc">{{row.Session1}}</td></tr>
           {% endif %}
         {% elsif row.Type == "Single" %}
+
+        {% assign chair1 = 'N/A' %}
+        {% assign chair2 = 'N/A' %}
+        {% assign chair1check = 'Session ' | append: row.Session1 | append: ':' %}
+        {% assign chair2check = 'Session ' | append: row.Session2 | append: ':' %}
+        {% for chairrow in site.data.session_chairs %}
+          {% if chairrow.Sessions contains chair1check %}
+            {% assign chair1 = chairrow.Chairs %}
+          {% endif %}
+          {% if chairrow.Sessions contains chair2check %}
+            {% assign chair2 = chairrow.Chairs %}
+          {% endif %}
+        {% endfor %}
+
         <tr>
             <td class="time">{{row.Time}}:00 UTC</td>
             {% assign delaysuffix = "" %}
@@ -72,13 +86,14 @@ layout: page
             {% if row.Session1 contains '31a' %}
             {% assign delaysuffix = " (delayed by 20min)" %}
             {% endif %}
-            <td id="{{row.Session1 | slugify}}" class="session-title session-talk1">({{row.Session1}}) {{row.Session1_title}} {{delaysuffix}}</td>
-            <td id="{{row.Session2 | slugify}}" class="session-title session-talk2">({{row.Session2}}) {{row.Session2_title}} {{delaysuffix}}</td>
+            <td id="{{row.Session1 | slugify}}" class="session-title session-talk1">({{row.Session1}}) {{row.Session1_title}} {{delaysuffix}}<br />Session Chair: {{chair1}}</td>
+            <td id="{{row.Session2 | slugify}}" class="session-title session-talk2">({{row.Session2}}) {{row.Session2_title}} {{delaysuffix}}<br />Session Chair: {{chair2}}</td>
           </tr>
           {% assign session11 = (site.data.paper_details | where:"Session1",row.Session1) %}
           {% assign session12 = (site.data.paper_details | where:"Session2",row.Session1) %}
           {% assign session21 = (site.data.paper_details | where:"Session1",row.Session2) %}
           {% assign session22 = (site.data.paper_details | where:"Session2",row.Session2) %}
+
           {% assign session1 = session11 | concat:session12 %}
           {% assign session2 = session21 | concat:session22 %}
           {% for index in (0..10) %}
