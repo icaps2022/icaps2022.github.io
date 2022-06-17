@@ -29,10 +29,13 @@ for i in range(len(pdfData['Title'])):
 	intPaperData = re.sub("[^0-9]", "", pdfData['Paper ID'][i])
 	pdfData["Paper ID"][i] = str(intPaperData)
 
-
+videoData = pd.read_csv('paperid-to-videoid.csv',header=0,delimiter=";")
+print (videoData.keys())
 for i in range(len(linkData['Paper ID'])):
 	if not isNaN(str(linkData['Paper ID'][i])):
 		paper_id = linkData['Paper ID'][i]
+		video_feed = videoData["VideoID"][list(videoData["PaperID"]).index((int(paper_id)))]
+
 		pdflink = ""
 		# if int(paper_id) < 351:
 		pdflink = pdfData['pdf link'][list(pdfData['Paper ID']).index(str(int(paper_id)))]
@@ -70,8 +73,11 @@ for i in range(len(linkData['Paper ID'])):
 		f2.write("<div1> June "+str(20+int(linkData['Day2_id'][i]))+", Booth "+str(int(linkData['Posterid_day2'][i]))+"</div1> <br><br>\n")
 		f2.write("</section>\n </div>\n")
 
-		f2.write("<div class='9u 12u(mobile)'>\n    <section>\n      <header>\n        <h1 class='top'>"+scheduleData['Title'][schedule_paper_ID_index]+"</h1>\n        <h3>"+scheduleData['Authors'][schedule_paper_ID_index]+"</h3>\n      </header>\n<b>Abstract:</b> "+abstract)
-		f2.write("\n</section>\n  </div>\n  </div>\n</div>")
+		f2.write("<div class='9u 12u(mobile)'>\n    <section>\n      <header>\n        <h1 class='top'>"+scheduleData['Title'][schedule_paper_ID_index]+"</h1>\n        <h3>"+scheduleData['Authors'][schedule_paper_ID_index]+"</h3>\n      </header>\n<b>Abstract:</b> "+abstract+"<br><br>\n")
+		f2.write("<div id='presentation-embed-"+str(video_feed)+"'></div>\n")
+		f2.write("<script src='https://slideslive.com/embed_presentation.js'></script>\n<script>\n")
+		f2.write("embed = new SlidesLiveEmbed('presentation-embed-"+str(video_feed)+"', { \n presentationId: '"+str(video_feed)+"',\n autoPlay: false,\n verticalEnabled: true, \n   });\n</script>\n")
+		f2.write("</section>\n  </div>\n  </div>\n</div>")
 
 		f2.close()
 		if paper_id==373:
