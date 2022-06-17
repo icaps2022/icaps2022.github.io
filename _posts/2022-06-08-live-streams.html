@@ -39,11 +39,33 @@ permalink: live-streams
             <p>You will be prompted to enter a password to access the online streams. This password has been sent to you via
               email.</p>
 
+            <h3>Availability</h3>
+            <p>The video players will only become active on the respective day. Past streams will remain available (at least)
+            until the end of the conference. Links for days 3 and 4 of the conference will be made available soon.</p>
+
+            <div id="day-nav">
+              <ul>
+                <li class="day-link" id="day-1"><a href="#" onclick="return false;">June 21th</a></li>
+                <li class="day-link" id="day-2"><a href="#" onclick="return false;">June 22th</a></li>
+                <li style="padding: 10px;">June 23th</li>
+                <li style="padding: 10px;">June 24th</li>
+              </ul>
+            </div>
+
             <h3>Track A / Plenary sessions</h3>
-            <p>Link will be published here soon.</p>
+
+            <div class="day-video" id="presentation-embed-a-day-1"></div>
+            <div class="day-video" id="presentation-embed-a-day-2"></div>
+            <div class="day-video" id="presentation-embed-a-day-3"></div>
+            <div class="day-video" id="presentation-embed-a-day-4"></div>
+
 
             <h3>Track B</h3>
-            <p>Link will be published here soon.</p>
+
+            <div class="day-video" id="presentation-embed-b-day-1"></div>
+            <div class="day-video" id="presentation-embed-b-day-2"></div>
+            <div class="day-video" id="presentation-embed-b-day-3"></div>
+            <div class="day-video" id="presentation-embed-b-day-4"></div>
 
           </div>
         </div>
@@ -53,3 +75,80 @@ permalink: live-streams
     </div>
   </div>
 </div>
+
+<script src="https://slideslive.com/embed_presentation.js"></script>
+<script>
+embedA1 = new SlidesLiveEmbed("presentation-embed-a-day-1", {
+  presentationId: "38984519",
+  autoPlay: false,
+  verticalEnabled: true,
+});
+embedA2 = new SlidesLiveEmbed("presentation-embed-a-day-2", {
+  presentationId: "38984561",
+  autoPlay: false,
+  verticalEnabled: true,
+});
+embedB1 = new SlidesLiveEmbed("presentation-embed-b-day-1", {
+  presentationId: "38984559",
+  autoPlay: false,
+  verticalEnabled: true,
+});
+embedB2 = new SlidesLiveEmbed("presentation-embed-b-day-2", {
+  presentationId: "38984562",
+  autoPlay: false,
+  verticalEnabled: true,
+});
+</script>
+<script>
+  $( document ).ready(function() {
+    console.log( "ready!" );
+    $('#day-1 a').css('background-color', '#ddd');
+    $('.day-video').hide();
+    $('#presentation-embed-a-day-1').show();
+    $('#presentation-embed-b-day-1').show();
+    $('.day-link').click(function() {
+      $('.day-video').hide();
+      $('#presentation-embed-a-' + $(this).attr('id')).show();
+      $('#presentation-embed-b-' + $(this).attr('id')).show();
+      $('.day-link a').css('background-color', '#fff');
+      $('#' + $(this).attr('id') + ' a').css('background-color', '#ddd');
+    });
+  });
+</script>
+
+<style>
+  /* Make day-nav a horizontal navbar */
+  #day-nav {
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+  #day-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #day-nav li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  #day-nav li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    background-color: white;
+  }
+  #day-nav li a:hover {
+    background-color: #ddd;
+  }
+  #day-nav li.day-link {
+    background-color: #ddd;
+  }
+  #day-nav li.day-link a {
+    color: #000;
+  }
+</style>
