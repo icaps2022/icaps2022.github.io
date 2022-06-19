@@ -77,6 +77,7 @@ for i in range(len(linkData['Paper ID'])):
 		f2.write("<div id='presentation-embed-"+str(video_feed)+"'></div>\n")
 		f2.write("<script src='https://slideslive.com/embed_presentation.js'></script>\n<script>\n")
 		f2.write("embed = new SlidesLiveEmbed('presentation-embed-"+str(video_feed)+"', { \n presentationId: '"+str(video_feed)+"',\n autoPlay: false,\n verticalEnabled: true, \n   });\n</script>\n")
+		f2.write("<h4><p style='color:red'><sup>*</sup>This password protected talk video will only be available after it was presented at the conference.</p></h4>")
 		f2.write("</section>\n  </div>\n  </div>\n</div>")
 
 		f2.close()
