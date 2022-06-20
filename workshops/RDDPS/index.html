@@ -214,6 +214,18 @@ At least one author of each accepted paper must attend the workshop in order to 
     font-weight: normal;
     font-style: italic;
 }
+.rddps_video, .rddps_video_na, .rddps_video_nanp {
+    display: block;
+    font-weight: normal;
+}
+.rddps_video_na::after {
+    content: '[not recorded]';
+    font-style: italic;
+}
+.rddps_video_nanp::after {
+    content: '[did not present]';
+    font-style: italic;
+}
 </style>
 
 <center>
@@ -232,7 +244,7 @@ At least one author of each accepted paper must attend the workshop in order to 
 </tr>
 
 <tr class="rddps_rowB_top">
-    <td colspan="2" class="rddps_session">Opening Remarks</td>
+    <td colspan="2" class="rddps_session">Opening Remarks<span class="rddps_video"><a href="https://youtu.be/N8aMNxNo9Ag">Recording</a></span></td>
     <td class="rddps_time_span">11:55 pm <span class="rddps_to"></span> 12:00 am</td>
     <td class="rddps_time_span">3:55 pm  <span class="rddps_to"></span> 4:00 pm</td>
     <td class="rddps_time_span">9:55 am  <span class="rddps_to"></span> 10:00 am</td>
@@ -240,7 +252,7 @@ At least one author of each accepted paper must attend the workshop in order to 
 </tr>
 
 <tr class="rddps_rowA_top">
-    <td colspan="2" class="rddps_session">Session 1: Invited Talk: "Would you let HAL-320 be your captain today?" by Florent Teichteil-K&ouml;nigsbuch<span class="rddps_chair">Chair: J&ouml;rg Hoffmann</span></td>
+    <td colspan="2" class="rddps_session">Session 1: Invited Talk: "Would you let HAL-320 be your captain today?" by Florent Teichteil-K&ouml;nigsbuch<span class="rddps_chair">Chair: J&ouml;rg Hoffmann</span><span class="rddps_video_na"></span></td>
     <td class="rddps_time_span">12:00 am <span class="rddps_to"></span> 12:50 am</td>
     <td class="rddps_time_span">4:00 pm  <span class="rddps_to"></span> 4:50 pm </td>
     <td class="rddps_time_span">10:00 am <span class="rddps_to"></span> 10:50 am</td>
@@ -260,11 +272,11 @@ At least one author of each accepted paper must attend the workshop in order to 
             <li>
                 <span class="rddps_title">NN Policy Verification via Predicate Abstraction: CEGAR</span>
                 <span class="rddps_authors">Marcel Vinzent and J&ouml;rg Hoffmann</span>
-            </li>
+            </li><span class="rddps_video_na"><a href="papers/vinzent_hoffmann_rddps22.pdf">PDF</a>&nbsp;&nbsp;</span>
             <li>
                 <span class="rddps_title">Metamorphic Relations via Relaxations: An Approach to Obtain Oracles for Action-Policy Testing</span>
                 <span class="rddps_authors">Hasan Ferit Enişer, Timo Gros, Valentin Wüstholz, J&ouml;rg Hoffmann and Maria Christakis</span>
-            </li>
+            </li><span class="rddps_video_na"><a href="papers/eniser_etal_rddps22.pdf">PDF</a>&nbsp;&nbsp;</span>
         </ul>
     </td>
 </tr>
@@ -282,11 +294,11 @@ At least one author of each accepted paper must attend the workshop in order to 
             <li>
                 <span class="rddps_title">Scaling up ML-based Black-box Planning with Partial STRIPS Models</span>
                 <span class="rddps_authors">Matias Greco, Álvaro Torralba, Jorge A. Baier and Hector Palacios</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/greco_etal_rddps22.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/LWxSRp1-pgU">Recording</a></span>
             <li>
                 <span class="rddps_title">Neural Network Heuristic Functions: Taking Confidence into Account</span>
                 <span class="rddps_authors">Daniel Heller, Patrick Ferber, Julian Bitterwolf, Matthias Hein and J&ouml;rg Hoffmann</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/heller_etal_rddps22.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/BfYu7b63mB8">Recording</a></span>
         </ul>
     </td>
 </tr>
@@ -312,11 +324,11 @@ At least one author of each accepted paper must attend the workshop in order to 
             <li>
                 <span class="rddps_title">Differential Assessment of Black-Box AI Agents</span>
                 <span class="rddps_authors">Rashmeet Kaur Nayyar, Pulkit Verma and Siddharth Srivastava</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/nayyar_etal_rddps22.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/ICQ6AE_v5xU">Recording</a></span>
             <li>
                 <span class="rddps_title">Collaborative Multi-Agent Planning with Black-Box Agents by Learning Action Models</span>
                 <span class="rddps_authors">Argaman Mordoch, Daniel Portnoy, Brendan Juba and Roni Stern</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/mordoch_etal_rddps22.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/u5z3ZWOKwyA">Recording</a></span>
         </ul>
     </td>
 </tr>
@@ -334,15 +346,15 @@ At least one author of each accepted paper must attend the workshop in order to 
             <li>
                 <span class="rddps_title">Position Paper: Online Modeling for Offline Planning</span>
                 <span class="rddps_authors">Eyal Weiss and Gal Kaminka</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/weiss_kaminka_rddps22b.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/VgrhnX9q3-c">Recording</a></span>
             <li>
                 <span class="rddps_title">Planning with Dynamically Estimated Action Costs</span>
                 <span class="rddps_authors">Eyal Weiss and Gal Kaminka</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/weiss_kaminka_rddps22a.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/aCBKqSCOGb8">Recording</a></span>
             <li>
                 <span class="rddps_title">An AI Safety Threat from Learned Planning Models</span>
                 <span class="rddps_authors">Toryn Q. Klassen, Sheila A. McIlraith and Christian Muise</span>
-            </li>
+            </li><span class="rddps_video"><a href="papers/klassen_etal_rddps22.pdf">PDF</a>&nbsp;&nbsp;<a href="https://youtu.be/KL4u6hHFnp4">Recording</a></span>
         </ul>
     </td>
 </tr>
@@ -357,9 +369,9 @@ At least one author of each accepted paper must attend the workshop in order to 
 <tr class="rddps_rowA">
     <td colspan="6" class="rddps_panel">
         <ul>
-            <li>Invited Panelist 1: Sandhya Saisubramanian</li>
-            <li>Invited Panelist 2: Scott Sanner</li>
-            <li>Open Discussion</li>
+            <li>Invited Panelist 1: Sandhya Saisubramanian<span class="rddps_video"><a href="https://youtu.be/TbUT6oTl2o8">Recording</a></span></li>
+            <li>Invited Panelist 2: Scott Sanner<span class="rddps_video_nanp"></span></li>
+            <li>Open Discussion<span class="rddps_video_na"></span></li>
         </ul>
     </td>
 </tr>
