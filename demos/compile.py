@@ -21,6 +21,8 @@ with open('data.csv') as f:
             'authors': row[1],
             'title': row[2],
             'pid': row[0],
+            'poster': row[11],
+            'demo': row[12],
             'times': fetch_times(row)
         }
 
@@ -34,8 +36,12 @@ TEMPLATE = """
             <h2>{authors}</h2>
             <h3>Scheduled Sessions</h3>
             <ul>{times}</ul>
-            <a class="button float-right-button"
+            <a style="margin-left: 10px" class="button float-right-button"
+                href="{poster}">Poster</a>
+            <a style="margin-left: 10px" class="button float-right-button"
                 href="ICAPS_2022_paper_{pid}.pdf">Paper</a>
+            <!--a style="margin-left: 10px" class="button float-right-button"
+                href="{demo}">Demo</a-->
           </div>
         </div>
       </section>
