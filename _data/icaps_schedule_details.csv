@@ -1,5 +1,5 @@
 Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Session1_papers,Session2_papers
-0,6,1,Tuesday 21,Joint,Opening,Opening,,,,
+0,6,1,Tuesday 21,Joint,Opening (start: +30min),Opening (start: +30min),,,,
 1,7,1,Tuesday 21,Joint,Invited Talk: Malte Helmert,helmert,,,,
 2,8,1,Tuesday 21,Joint,Social: Get Together,Social: Get Together,,,,
 3,9,1,Tuesday 21,Single,1a,1b,Planning Representations and Scheduling,Verification,"2, 77, 257","44, 113, 368"

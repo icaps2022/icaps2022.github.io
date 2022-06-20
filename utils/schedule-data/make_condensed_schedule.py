@@ -33,7 +33,7 @@ GREEN = [
 
 BLUE = [
     'Poster and Demo Session',
-    'Opening'
+    'Opening (start: +30min)'
 ]
 
 RED = [
