@@ -40,8 +40,8 @@ TEMPLATE = """
                 href="{poster}">Poster</a>
             <a style="margin-left: 10px" class="button float-right-button"
                 href="ICAPS_2022_paper_{pid}.pdf">Paper</a>
-            <!--a style="margin-left: 10px" class="button float-right-button"
-                href="{demo}">Demo</a-->
+            <a style="margin-left: 10px" class="button float-right-button"
+                href="{demo}">Demo</a>
           </div>
         </div>
       </section>
