@@ -47,8 +47,8 @@ permalink: live-streams
               <ul>
                 <li class="day-link" id="day-1"><a href="#" onclick="return false;">June 21th</a></li>
                 <li class="day-link" id="day-2"><a href="#" onclick="return false;">June 22th</a></li>
-                <li style="padding: 10px;">June 23th</li>
-                <li style="padding: 10px;">June 24th</li>
+                <li class="day-link" id="day-3"><a href="#" onclick="return false;">June 23th</a></li>
+                <li class="day-link" id="day-4"><a href="#" onclick="return false;">June 24th</a></li>
               </ul>
             </div>
 
@@ -88,6 +88,16 @@ embedA2 = new SlidesLiveEmbed("presentation-embed-a-day-2", {
   autoPlay: false,
   verticalEnabled: true,
 });
+embedA3 = new SlidesLiveEmbed("presentation-embed-a-day-3", {
+  presentationId: "38986025",
+  autoPlay: false,
+  verticalEnabled: true,
+});
+embedA4 = new SlidesLiveEmbed("presentation-embed-a-day-4", {
+  presentationId: "38986027",
+  autoPlay: false,
+  verticalEnabled: true,
+});
 embedB1 = new SlidesLiveEmbed("presentation-embed-b-day-1", {
   presentationId: "38984559",
   autoPlay: false,
@@ -98,14 +108,24 @@ embedB2 = new SlidesLiveEmbed("presentation-embed-b-day-2", {
   autoPlay: false,
   verticalEnabled: true,
 });
+embedB3 = new SlidesLiveEmbed("presentation-embed-b-day-3", {
+  presentationId: "38986026",
+  autoPlay: false,
+  verticalEnabled: true,
+});
+embedB4 = new SlidesLiveEmbed("presentation-embed-b-day-4", {
+  presentationId: "38986028",
+  autoPlay: false,
+  verticalEnabled: true,
+});
 </script>
 <script>
   $( document ).ready(function() {
     console.log( "ready!" );
-    $('#day-1 a').css('background-color', '#ddd');
+    $('#day-2 a').css('background-color', '#ddd');
     $('.day-video').hide();
-    $('#presentation-embed-a-day-1').show();
-    $('#presentation-embed-b-day-1').show();
+    $('#presentation-embed-a-day-2').show();
+    $('#presentation-embed-b-day-2').show();
     $('.day-link').click(function() {
       $('.day-video').hide();
       $('#presentation-embed-a-' + $(this).attr('id')).show();
