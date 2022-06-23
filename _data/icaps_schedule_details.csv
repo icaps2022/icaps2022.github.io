@@ -52,7 +52,7 @@ Slot,Time,Day,Weekday,Type,Session1,Session2,Session1_title,Session2_title,Sessi
 12,18,3,Thursday 23,Joint,Invited Talk: Sidd Srinivasa,srinivasa,,,,
 13,19,3,Thursday 23,Empty,None,None,,,,
 14,20,3,Thursday 23,Single,24a,24b,Reinforcement Learning in Applications,User Interactions and Top-Quality Planning,"53, 102, 232","65, 255, 369"
-15,21,3,Thursday 23,Joint,Social: Open Discussion,discussion,,,,
+15,21,3,Thursday 23,Joint,Social: Get Together,Social: Get Together,,,,
 16,22,3,Thursday 23,Single,25a,25b,Heuristic Search,Epistemic Planning,"54, 228, 328","140, 351, 372"
 17,23,3,Thursday 23,Single,26a,26b,Heuristics,Scheduling,"56, 180, 221","77, 164, 264"
 18,24,3,Thursday 23,Joint,Poster and Demo Session,Poster and Demo Session,,,,
