@@ -58,10 +58,10 @@ layout: page
     // Iterate over the demos
     for (var i = 0; i < 5; i++) {
       var id = demos[i].id;
-      var title = demos[i].getElementsByTagName('h1')[0].innerHTML;
+      var title = demos[i].getElementsByClassName('demo-title')[0].innerHTML;
       $('#demo-link-list').append('<li><a href="#' + id + '">' + title + '</a></li>');
       id = demos[i + 5].id;
-      title = demos[i + 5].getElementsByTagName('h1')[0].innerHTML;
+      title = demos[i + 5].getElementsByClassName('demo-title')[0].innerHTML;
       $('#demo-link-list').append('<li><a href="#' + id + '">' + title + '</a></li>');
     }
 

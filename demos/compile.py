@@ -17,12 +17,24 @@ data = {}
 with open('data.csv') as f:
     reader = csv.reader(f)
     for row in list(reader)[3:]:
+
+        awardpre = '(<span style="color:red"><a href="/awards#demo">'
+        awardpost = '</a></span>) '
+        award = ''
+        if row[0] == '382': # machetli
+            award = awardpre + '1st Place' + awardpost
+        elif row[0] == '377': # planutils
+            award = awardpre + '2nd Place' + awardpost
+        elif row[0] == '379': # UP
+            award = awardpre + '3rd Place' + awardpost
+
         data[row[0]] = {
             'authors': row[1],
             'title': row[2],
             'pid': row[0],
             'poster': row[11],
             'demo': row[12],
+            'award': award,
             'times': fetch_times(row)
         }
 
@@ -31,7 +43,7 @@ TEMPLATE = """
       <section id="demo-{pid}" class="demo">
         <div class="row">
           <div class="12u 12u(mobile)">
-            <h1>{title}</h1>
+            <h1>{award}<span class="demo-title">{title}</span></h1>
             <img src="{pid}.png" alt="{title}" />
             <h2>{authors}</h2>
             <h3>Scheduled Sessions</h3>
